@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>C#第五周第一节课的代码整理</title>
+    <link href="/2025/03/17/C-%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/"/>
+    <url>/2025/03/17/C-%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<p>这节课课前首先提问了： $break$ 语句和 $continue$ 语句的区别分别是什么。</p><p>$break$ 语句是跳出整个循环，而且是最近的循环。$continue$ 是结束当前的循环。</p><p>下面的这份代码在解释outer参数时出现。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">outer</span>参数<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">TryFindMinMax</span>(<span class="hljs-params"><span class="hljs-built_in">int</span>[] numbers, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> min, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> max</span>)</span><br>        &#123;<br>            min = max = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">if</span>(numbers == <span class="hljs-literal">null</span> || numbers.Length == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            min = numbers[<span class="hljs-number">0</span>]; <br>            max = numbers[<span class="hljs-number">0</span>];<br>            <span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">int</span> num <span class="hljs-keyword">in</span> numbers)<br>            &#123; <br>                <span class="hljs-keyword">if</span>(num &lt; min) min = num;<br>                <span class="hljs-keyword">if</span> (num &gt; max) max = num;<br>            &#125;<br>            <span class="hljs-comment">// 此处如果对numbers进行修改，那么主函数中的 data 也会发生变化</span><br>            <span class="hljs-comment">// 因为数组是引用类型，传递的是地址</span><br>            <span class="hljs-comment">// 上课点到我回答这个问题，答错了www</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        &#125;<br><br><br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span>[] data = &#123; <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>&#125;;<br>            <span class="hljs-keyword">if</span> (TryFindMinMax(data, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> minVal, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> maxVal))<br>            &#123;<br>                Console.WriteLine(<span class="hljs-string">$&quot;最小值：<span class="hljs-subst">&#123;minVal&#125;</span>， 最大值<span class="hljs-subst">&#123;maxVal&#125;</span>&quot;</span>);<br>            &#125;<br><br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure><p>这里是对params参数的调用测试，params参数传递的是可变参数数组，允许方法接收可变数量的参数，这样调用方法时可以传入任意数量的同类型参数，而不需要显式地创建数组。 </p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">params</span>参数应用<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> <span class="hljs-title">Sum</span>(<span class="hljs-params"><span class="hljs-keyword">params</span> <span class="hljs-built_in">int</span>[] numbers</span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> total = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">int</span> num <span class="hljs-keyword">in</span> numbers)<br>            &#123;<br>                total += num;<br>            &#125;<br>            <span class="hljs-keyword">return</span> total;<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            Console.WriteLine(Sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>));<br>            Console.WriteLine(Sum(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>));<br>            Console.WriteLine(Sum());<br><br>            <span class="hljs-comment">//也可以直接传递数组</span><br>            <span class="hljs-built_in">int</span>[] arr = &#123; <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span> &#125;;<br>            Console.WriteLine(Sum(arr));<br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure><p>下面是课堂上布置的一个练习，用来测试递归函数。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> 递归测试<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> <span class="hljs-title">Fun</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> n</span>)</span><br>        &#123;<br>            <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * Fun(n - <span class="hljs-number">1</span>) + Fun(n - <span class="hljs-number">2</span>);<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> x = <span class="hljs-number">8</span>;<br>            Console.WriteLine(<span class="hljs-string">$&quot;函数得到的值为<span class="hljs-subst">&#123;Fun(x)&#125;</span>&quot;</span>);<br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure><p>老师布置了一个任务，就是写一个适用于四位数水仙花数的程序，放在word中，后面提交到他的电脑上。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>C#</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课堂笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>C#阶段性复习——第一章</title>
+    <link href="/2025/03/17/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <url>/2025/03/17/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<p>我会将自己复习 C# 的笔记都同步更新到博客上，不过我无法保证这些文章对于最后的考试会有帮助。这里整理的知识点主要有两大来源：课本内容与课堂习题。我自己也会在课上跟着老师绘制树形图，不过绘制树形图的频率没有规律，而且往往绘制出来的内容也会比较乱，这个我就不上传了，我会根据树形图上的重点——也就是老师上课时讲过的重点，去整理这些笔记。未来如果有机会的话，我也会将课堂上我们写过的代码给整理上去。眼下是第五周，前几周的代码我可能上传不了<del>因为之前命名的太乱了</del>，不过前几周的代码也不算重要。未来我大概每节课之后都会更新一次代码。希望能说到做到。</p><p>下面就是对第一章知识点的整理。<del>说实话感觉课后习题与课堂上讲的内容关联性不大</del></p><h2 id="一-类"><a href="#一-类" class="headerlink" title="一. 类"></a>一. 类</h2><h3 id="1-对象抽象与归类"><a href="#1-对象抽象与归类" class="headerlink" title="1. 对象抽象与归类"></a>1. 对象抽象与归类</h3><p>类是从具有<strong>相同行为与属性的对象</strong>中抽象出来的。类是一堆具有共性对象的特性描述，也就是对某种对象的抽象描述。对象具有<strong>类同样的属性成员与方法成员</strong>，用一个类定义的一堆对象中，不同对象具有<strong>不同的</strong>属性值。</p><h3 id="2-类的封装"><a href="#2-类的封装" class="headerlink" title="2. 类的封装"></a>2. 类的封装</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>C#</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课内复习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>通关大表哥2第二章后的一些随感</title>
+    <link href="/2025/03/15/%E9%80%9A%E5%85%B3%E5%A4%A7%E8%A1%A8%E5%93%A52%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%9A%8F%E6%84%9F/"/>
+    <url>/2025/03/15/%E9%80%9A%E5%85%B3%E5%A4%A7%E8%A1%A8%E5%93%A52%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E9%9A%8F%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>用了两周时间，大概十六个小时，通关了大表哥2的第二章。随着剧情的深入，我越发喜欢起我们的主角亚瑟和他的兄弟们。这个游戏带给我前所未有的震撼，虽然它的剧情节奏偏缓，角色在游戏里的远行也主要依靠骑行，但这丝毫不影响游戏的体验。一群亡命徒，杀人抢劫拦火车，嘴里却时常念叨追寻自由。在营地中有时会发生争吵，到了晚上，你又常常可以坐在火堆前，听其他兄弟的故事。亡命徒的生活并不都是充满血腥和硝烟，他们当中的许多人也拥有着很正的三观。他们每个人也都有着自己的故事。他们的故事与剧情可能没有太大关联，在未来我也可能无法了解他们所有的过往，但这已经够了。我在游戏时往往忘记了这是一款游戏，我真的愿意在火堆前，听一个npc讲述十几分钟的故事，没有剧情要求，我也可以随时离开，但我就是有些不舍，我很珍惜这些故事。这些故事为这款游戏带来了超乎寻常的深度，也让游戏里的角色拥有更为立体的灵魂。</p><p>亚瑟，我们的主角。在开始游戏时我们对他一无所知，随着剧情慢慢深入，我们开始了解了一些他的过往，了解他与其他人的交集。而我们也渐渐了解了营地里的其他人。而这些过去的故事都是都是亚瑟与伙伴们在前行的途中，聊天提到的，与剧情往往没有太多的直接的关系。我非常的喜欢这一点。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Game</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>大表哥2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>蓝桥杯客观题复习概览</title>
     <link href="/2025/03/14/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AE%A2%E8%A7%82%E9%A2%98%E5%A4%8D%E4%B9%A0%E6%A6%82%E8%A7%88/"/>
     <url>/2025/03/14/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AE%A2%E8%A7%82%E9%A2%98%E5%A4%8D%E4%B9%A0%E6%A6%82%E8%A7%88/</url>

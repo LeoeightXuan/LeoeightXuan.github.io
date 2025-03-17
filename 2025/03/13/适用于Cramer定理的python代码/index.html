@@ -22,7 +22,7 @@
     <meta name="description" content="最近做线性代数练习，遇到一节练习，要求我们全部用cramer定理去解线性方程。这显然是很离谱的，因为cramer定理虽然正确，但计算量巨大。而练习涉及到的矩阵，大部分都是三阶和四阶矩阵，有一题甚至涉及6阶矩阵，简直丧心病狂。所以我用deepseek生成了一篇代码。这篇代码写的很好，思路清晰，结构规整而且有许多对numpy的调用值得学习，所以我准备把这篇代码整理下来，写篇文章放到博客上。 下面就是d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="适用于Cramer定理的python代码">
-<meta property="og:url" content="http://example.com/2025/03/13/%E9%80%82%E7%94%A8%E4%BA%8ECramer%E5%AE%9A%E7%90%86%E7%9A%84python%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:url" content="https://leoeightxuan.github.io/2025/03/13/%E9%80%82%E7%94%A8%E4%BA%8ECramer%E5%AE%9A%E7%90%86%E7%9A%84python%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="小窝">
 <meta property="og:description" content="最近做线性代数练习，遇到一节练习，要求我们全部用cramer定理去解线性方程。这显然是很离谱的，因为cramer定理虽然正确，但计算量巨大。而练习涉及到的矩阵，大部分都是三阶和四阶矩阵，有一题甚至涉及6阶矩阵，简直丧心病狂。所以我用deepseek生成了一篇代码。这篇代码写的很好，思路清晰，结构规整而且有许多对numpy的调用值得学习，所以我准备把这篇代码整理下来，写篇文章放到博客上。 下面就是d">
 <meta property="og:locale" content="zh_CN">
@@ -72,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"FFpLzuDtvWgcFyOULoNXEIPO-gzGzoHsz","app_key":"vC9oJnWm7lisaWZZ3knYaGIx","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"leoeightxuan.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"FFpLzuDtvWgcFyOULoNXEIPO-gzGzoHsz","app_key":"vC9oJnWm7lisaWZZ3knYaGIx","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -359,7 +359,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>适用于Cramer定理的python代码</div>
-      <div>http://example.com/2025/03/13/适用于Cramer定理的python代码/</div>
+      <div>https://leoeightxuan.github.io/2025/03/13/适用于Cramer定理的python代码/</div>
     </div>
     <div class="license-meta">
       

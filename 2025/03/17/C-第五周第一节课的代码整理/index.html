@@ -19,21 +19,22 @@
   <meta name="author" content="Leoeight">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="这节课课前首先提问了： $break$ 语句和 $continue$ 语句的区别分别是什么。 $break$ 语句是跳出整个循环，而且是最近的循环。$continue$ 是结束当前的循环。 下面的这份代码在解释outer参数时出现。 12345678910111213141516171819202122232425262728293031323334353637namespace outer参数&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://leoeightxuan.github.io/2025/03/13/hello-world/index.html">
+<meta property="og:title" content="C#第五周第一节课的代码整理">
+<meta property="og:url" content="https://leoeightxuan.github.io/2025/03/17/C-%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="小窝">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="这节课课前首先提问了： $break$ 语句和 $continue$ 语句的区别分别是什么。 $break$ 语句是跳出整个循环，而且是最近的循环。$continue$ 是结束当前的循环。 下面的这份代码在解释outer参数时出现。 12345678910111213141516171819202122232425262728293031323334353637namespace outer参数&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-13T10:16:21.501Z">
-<meta property="article:modified_time" content="2025-03-13T10:16:21.501Z">
+<meta property="article:published_time" content="2025-03-17T10:58:00.000Z">
+<meta property="article:modified_time" content="2025-03-17T12:40:43.031Z">
 <meta property="article:author" content="Leoeight">
+<meta property="article:tag" content="课堂笔记">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - 小窝</title>
+  <title>C#第五周第一节课的代码整理 - 小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="C#第五周第一节课的代码整理"></span>
           
         </div>
 
@@ -223,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-13 18:16" pubdate>
-          2025年3月13日 晚上
+        <time datetime="2025-03-17 18:58" pubdate>
+          2025年3月17日 晚上
         </time>
       </span>
     
@@ -235,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          470 字
         
       </span>
     
@@ -246,7 +247,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -292,24 +293,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">C#第五周第一节课的代码整理</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <p>这节课课前首先提问了： $break$ 语句和 $continue$ 语句的区别分别是什么。</p>
+<p>$break$ 语句是跳出整个循环，而且是最近的循环。$continue$ 是结束当前的循环。</p>
+<p>下面的这份代码在解释outer参数时出现。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">outer</span>参数<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">TryFindMinMax</span>(<span class="hljs-params"><span class="hljs-built_in">int</span>[] numbers, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> min, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> max</span>)</span><br>        &#123;<br>            min = max = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">if</span>(numbers == <span class="hljs-literal">null</span> || numbers.Length == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            min = numbers[<span class="hljs-number">0</span>]; <br>            max = numbers[<span class="hljs-number">0</span>];<br>            <span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">int</span> num <span class="hljs-keyword">in</span> numbers)<br>            &#123; <br>                <span class="hljs-keyword">if</span>(num &lt; min) min = num;<br>                <span class="hljs-keyword">if</span> (num &gt; max) max = num;<br>            &#125;<br>            <span class="hljs-comment">// 此处如果对numbers进行修改，那么主函数中的 data 也会发生变化</span><br>            <span class="hljs-comment">// 因为数组是引用类型，传递的是地址</span><br>            <span class="hljs-comment">// 上课点到我回答这个问题，答错了www</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        &#125;<br><br><br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span>[] data = &#123; <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>&#125;;<br>            <span class="hljs-keyword">if</span> (TryFindMinMax(data, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> minVal, <span class="hljs-keyword">out</span> <span class="hljs-built_in">int</span> maxVal))<br>            &#123;<br>                Console.WriteLine(<span class="hljs-string">$&quot;最小值：<span class="hljs-subst">&#123;minVal&#125;</span>， 最大值<span class="hljs-subst">&#123;maxVal&#125;</span>&quot;</span>);<br>            &#125;<br><br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>这里是对params参数的调用测试，params参数传递的是可变参数数组，允许方法接收可变数量的参数，这样调用方法时可以传入任意数量的同类型参数，而不需要显式地创建数组。 </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">params</span>参数应用<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> <span class="hljs-title">Sum</span>(<span class="hljs-params"><span class="hljs-keyword">params</span> <span class="hljs-built_in">int</span>[] numbers</span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> total = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">foreach</span> (<span class="hljs-built_in">int</span> num <span class="hljs-keyword">in</span> numbers)<br>            &#123;<br>                total += num;<br>            &#125;<br>            <span class="hljs-keyword">return</span> total;<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            Console.WriteLine(Sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>));<br>            Console.WriteLine(Sum(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>));<br>            Console.WriteLine(Sum());<br><br>            <span class="hljs-comment">//也可以直接传递数组</span><br>            <span class="hljs-built_in">int</span>[] arr = &#123; <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span> &#125;;<br>            Console.WriteLine(Sum(arr));<br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+<p>下面是课堂上布置的一个练习，用来测试递归函数。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> 递归测试<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> <span class="hljs-title">Fun</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> n</span>)</span><br>        &#123;<br>            <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * Fun(n - <span class="hljs-number">1</span>) + Fun(n - <span class="hljs-number">2</span>);<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> x = <span class="hljs-number">8</span>;<br>            Console.WriteLine(<span class="hljs-string">$&quot;函数得到的值为<span class="hljs-subst">&#123;Fun(x)&#125;</span>&quot;</span>);<br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+<p>老师布置了一个任务，就是写一个适用于四位数水仙花数的程序，放在word中，后面提交到他的电脑上。</p>
 
                 
               </div>
@@ -318,6 +316,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C/" class="category-chain-item">C#</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="print-no-link">#课堂笔记</a>
+      
+    </div>
   
 </div>
 
@@ -327,8 +353,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>https://leoeightxuan.github.io/2025/03/13/hello-world/</div>
+      <div>C#第五周第一节课的代码整理</div>
+      <div>https://leoeightxuan.github.io/2025/03/17/C-第五周第一节课的代码整理/</div>
     </div>
     <div class="license-meta">
       
@@ -340,7 +366,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月13日</div>
+          <div>2025年3月17日</div>
         </div>
       
       
@@ -372,15 +398,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="测试文章">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">测试文章</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/03/17/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="C#阶段性复习——第一章">
+                        <span class="hidden-mobile">C#阶段性复习——第一章</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
