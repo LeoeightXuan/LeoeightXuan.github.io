@@ -19,22 +19,22 @@
   <meta name="author" content="Leoeight">
   <meta name="keywords" content="">
   
-    <meta name="description" content="注意，第五章讲完后会有一个期中测试，记得准备。 本节课花费了大量的时间讲解字符串的拘留池机制，注意复习。 下面是对于拘留池性质的测试与展示： 123456789101112131415161718192021222324252627282930313233343536373839404142434445using static System.Runtime.InteropServices.Java">
+    <meta name="description" content="12345678910111213141516171819202122232425namespace 交叉数组的遍历&#123;    internal class Program    &#123;        static void Main(string[] args)        &#123;            int[][] arr;            arr &#x3D; new i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第六周第一节课的代码整理">
-<meta property="og:url" content="https://leoeightxuan.github.io/2025/03/24/%E7%AC%AC%E5%85%AD%E5%91%A8%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/index.html">
+<meta property="og:title" content="C#第六周第二节课的代码整理">
+<meta property="og:url" content="https://leoeightxuan.github.io/2025/03/26/C-%E7%AC%AC%E5%85%AD%E5%91%A8%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="小窝">
-<meta property="og:description" content="注意，第五章讲完后会有一个期中测试，记得准备。 本节课花费了大量的时间讲解字符串的拘留池机制，注意复习。 下面是对于拘留池性质的测试与展示： 123456789101112131415161718192021222324252627282930313233343536373839404142434445using static System.Runtime.InteropServices.Java">
+<meta property="og:description" content="12345678910111213141516171819202122232425namespace 交叉数组的遍历&#123;    internal class Program    &#123;        static void Main(string[] args)        &#123;            int[][] arr;            arr &#x3D; new i">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-24T10:34:11.000Z">
-<meta property="article:modified_time" content="2025-03-24T12:40:37.109Z">
+<meta property="article:published_time" content="2025-03-26T11:19:05.000Z">
+<meta property="article:modified_time" content="2025-03-26T12:41:24.935Z">
 <meta property="article:author" content="Leoeight">
 <meta property="article:tag" content="课堂笔记">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第六周第一节课的代码整理 - 小窝</title>
+  <title>C#第六周第二节课的代码整理 - 小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第六周第一节课的代码整理"></span>
+            <span id="subtitle" data-typed-text="C#第六周第二节课的代码整理"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-24 18:34" pubdate>
-          2025年3月24日 晚上
+        <time datetime="2025-03-26 19:19" pubdate>
+          2025年3月26日 晚上
         </time>
       </span>
     
@@ -293,16 +293,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第六周第一节课的代码整理</h1>
+            <h1 id="seo-header">C#第六周第二节课的代码整理</h1>
             
             
               <div class="markdown-body">
                 
-                <p>注意，第五章讲完后会有一个期中测试，记得准备。</p>
-<p>本节课花费了大量的时间讲解字符串的拘留池机制，注意复习。</p>
-<p>下面是对于拘留池性质的测试与展示：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> <span class="hljs-keyword">static</span> System.Runtime.InteropServices.JavaScript.JSType;<br><span class="hljs-keyword">namespace</span> <span class="hljs-title">string</span>的拘留池测试<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>()</span><br>        &#123;<br>            <span class="hljs-built_in">string</span> str1 = <span class="hljs-string">&quot;I am very happy!!&quot;</span>;<br>            <span class="hljs-built_in">string</span> str2 = <span class="hljs-string">&quot;I am very happy!!&quot;</span>;<br>            Console.WriteLine(<span class="hljs-built_in">object</span>.ReferenceEquals(str1, str2)); <span class="hljs-comment">//str1 与 str2 的引用相同,</span><br>                                                                   <span class="hljs-comment">//返回结果为True</span><br><br>            <span class="hljs-built_in">char</span>[] array1 = &#123; <span class="hljs-string">&#x27;I&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;m&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-string">&#x27;v&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-string">&#x27;h&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;p&#x27;</span>, <span class="hljs-string">&#x27;p&#x27;</span>, <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-string">&#x27;!&#x27;</span>, <span class="hljs-string">&#x27;!&#x27;</span> &#125;;<br>            <span class="hljs-built_in">string</span> str4 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(array1);<br>            Console.WriteLine(<span class="hljs-built_in">object</span>.ReferenceEquals(str1, str4));  <span class="hljs-comment">//str1 与 str4 引用不同的话，</span><br>                                                                    <span class="hljs-comment">//就说明使用 new 时拘留池机制没有发挥作用</span><br>                                                                    <span class="hljs-comment">//False</span><br>                                                                    <span class="hljs-comment">//str2 存在容器中，所以返回的是一个对象的引用</span><br>                                                                    <span class="hljs-comment">//IsInterned(str2) = I am very happy!!</span><br>            Console.WriteLine(<span class="hljs-string">&quot;IsInterned(str2) = &quot;</span> + <span class="hljs-built_in">string</span>.IsInterned(str2));<br><br>            <span class="hljs-built_in">char</span>[] array2 = &#123; <span class="hljs-string">&#x27;t&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;s&#x27;</span>, <span class="hljs-string">&#x27;t&#x27;</span> &#125;;<br>            <span class="hljs-built_in">string</span> str5 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(array2);   <span class="hljs-comment">//因为 str5 使用 new 分配的，</span><br>                                                <span class="hljs-comment">//所以 str5 不存在与内部容器中，</span><br>                                                <span class="hljs-comment">//所以如果IsInterned(str5)返回 null,</span><br>                                                <span class="hljs-comment">//则说明该方法不会将其添加到拘留池中</span><br>            <span class="hljs-built_in">string</span> str6 = <span class="hljs-built_in">string</span>.IsInterned(str5);   <span class="hljs-comment">//返回值为null,说明在字符串拘留池中找不到字符串str5</span><br>            Console.WriteLine(str6 == <span class="hljs-literal">null</span> ? <span class="hljs-string">&quot;null&quot;</span> : <span class="hljs-string">&quot;not null&quot;</span>);   <span class="hljs-comment">// 输出为null</span><br><br>            <span class="hljs-built_in">string</span>.Intern(str5);   <span class="hljs-comment">//Intern方法将字符串str5添加到字符串拘留池中</span><br>            <span class="hljs-built_in">string</span> str7 = <span class="hljs-built_in">string</span>.IsInterned(str5); <span class="hljs-comment">//再用 IsInterned()验证下</span><br>                                                   <span class="hljs-comment">//intern()方法是否将其添加进了容器</span><br>                                                   <span class="hljs-comment">//此时str7的值为test</span><br>            Console.Write(<span class="hljs-string">$&quot;IsInterned(str5) = <span class="hljs-subst">&#123;<span class="hljs-built_in">string</span>.IsInterned(str5)&#125;</span>\n&quot;</span>);  <span class="hljs-comment">//test</span><br>            Console.WriteLine(str7 == <span class="hljs-literal">null</span> ? <span class="hljs-string">&quot;null&quot;</span> : <span class="hljs-string">&quot;not null&quot;</span>);  <span class="hljs-comment">//not null</span><br><br>            Console.ReadKey();<br><br><br>        &#125;<br>    &#125;<br>&#125;<br><br><br><br></code></pre></td></tr></table></figure>
+                <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> 交叉数组的遍历<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span>[][] arr;<br>            arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">3</span>][];<br>            arr[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">2</span>] &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>&#125;;<br>            arr[<span class="hljs-number">1</span>] = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">3</span>] &#123; <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ,<span class="hljs-number">4</span> &#125;;<br>            arr[<span class="hljs-number">2</span>] = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">4</span>] &#123; <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> &#125;;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.GetLength(<span class="hljs-number">0</span>); i++)<br>            &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; arr[i].Length; j++)<br>                &#123;<br>                    Console.Write(arr[i][j]);<br>                    Console.Write(<span class="hljs-string">&#x27; &#x27;</span>);<br>                &#125;<br>                Console.WriteLine();<br>            &#125;<br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
+<p>本周作业：完成数组删除函数的编写</p>
+<p>刚刚回答了个问题（就是下面这份代码的编写和讲解），拿了一些平时分，感觉还是不错的。不过感觉自己的语言表达能力还是有点不足，未来还得加强。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> 插入函数<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">            arrayBom ----&gt; 原数组</span><br><span class="hljs-comment">            ser      ----&gt; 插入的位置</span><br><span class="hljs-comment">            value    ----&gt; 插入的值</span><br><span class="hljs-comment">         */</span><br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span>[] <span class="hljs-title">AddArrayElement</span>(<span class="hljs-params"><span class="hljs-built_in">int</span>[] arrayBom, <span class="hljs-built_in">int</span> ser, <span class="hljs-built_in">int</span> <span class="hljs-keyword">value</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> length = arrayBom.Length + <span class="hljs-number">1</span>;<br>            <span class="hljs-built_in">int</span>[] answer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[length];<br>            <span class="hljs-keyword">if</span> (ser &gt;= length)<br>                ser = length - <span class="hljs-number">1</span>;<br>            <span class="hljs-built_in">int</span> num = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++)<br>            &#123;<br>                <span class="hljs-keyword">if</span> (i == ser)   <br>                    answer[i] = <span class="hljs-keyword">value</span>;<br>                <span class="hljs-keyword">else</span><br>                &#123;<br>                    answer[i] = arrayBom[num++];<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">return</span> answer;<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">8</span>];<br><br>            <span class="hljs-built_in">int</span> id, val;<br>            Console.WriteLine(<span class="hljs-string">&quot;请输入插入的位置&quot;</span>);<br>            id = Convert.ToInt32(Console.ReadLine());<br>            Console.WriteLine(<span class="hljs-string">&quot;请输入插入的值&quot;</span>);<br>            val = Convert.ToInt32(Console.ReadLine());<br>            a[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>            a[<span class="hljs-number">1</span>] = <span class="hljs-number">2</span>;<br>            a[<span class="hljs-number">2</span>] = <span class="hljs-number">3</span>;<br>            a[<span class="hljs-number">3</span>] = <span class="hljs-number">4</span>;<br>            a = AddArrayElement(a, id, val);<br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; a.Length; i++)<br>            &#123; <br>                Console.WriteLine(a[i]);<br>            &#125;<br>            <span class="hljs-comment">//Console.WriteLine(a.GetLength(0));</span><br>            Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>完成作业后我会把程序放到这篇文章最后，如果你看到这篇文章时哦还没有更新，记得提醒我，谢谢<del>咕咕咕</del> </p>
+<p>哦对，还有一个作业，将优化后的选择排序代码改为降序排序，别忘了。</p>
 
                 
               </div>
@@ -348,8 +351,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第六周第一节课的代码整理</div>
-      <div>https://leoeightxuan.github.io/2025/03/24/第六周第一节课的代码整理/</div>
+      <div>C#第六周第二节课的代码整理</div>
+      <div>https://leoeightxuan.github.io/2025/03/26/C-第六周第二节课的代码整理/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +364,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月24日</div>
+          <div>2025年3月26日</div>
         </div>
       
       
@@ -393,18 +396,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/26/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="C#阶段性复习--第二章">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">C#阶段性复习--第二章</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/19/C-%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/" title="C#第五周第二节课的代码整理">
-                        <span class="hidden-mobile">C#第五周第二节课的代码整理</span>
+                      <a href="/2025/03/26/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="C#阶段性复习--第二章">
+                        <span class="hidden-mobile">C#阶段性复习--第二章</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
