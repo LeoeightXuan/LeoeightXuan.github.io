@@ -33,9 +33,21 @@
     <link href="/2025/03/26/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
     <url>/2025/03/26/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="2-1-数据类型"><a href="#2-1-数据类型" class="headerlink" title="2.1 数据类型"></a>2.1 数据类型</h2><p>C#的数据类型主要分为两种 <font color="red"> <strong>值类型和引用类型</strong> </font></p><p>值类型变量<font color="red"> <strong>本身包含其数据</strong> </font>，而引用类型变量包含的是<font color="red"> <strong>指向包含数据的内存块的引用或称为句柄</strong> </font></p>]]></content>
     
     
+    <categories>
+      
+      <category>C#</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课内复习</tag>
+      
+    </tags>
     
   </entry>
   
