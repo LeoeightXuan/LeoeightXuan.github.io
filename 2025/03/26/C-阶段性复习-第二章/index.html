@@ -19,15 +19,15 @@
   <meta name="author" content="Leoeight">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄">
+    <meta name="description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄   其本质区别是：值类型直接存储其值，而引用类型存储对值得引用  值类型数据存储在栈中，而引用类型存储在堆中 堆和栈得主要区别是： 栈在编译时就分配好空间，在代码中有栈的明确定义 堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#阶段性复习--第二章">
 <meta property="og:url" content="https://leoeightxuan.github.io/2025/03/26/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
 <meta property="og:site_name" content="小窝">
-<meta property="og:description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄">
+<meta property="og:description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄   其本质区别是：值类型直接存储其值，而引用类型存储对值得引用  值类型数据存储在栈中，而引用类型存储在堆中 堆和栈得主要区别是： 栈在编译时就分配好空间，在代码中有栈的明确定义 堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-26T08:48:16.000Z">
-<meta property="article:modified_time" content="2025-03-26T12:42:59.671Z">
+<meta property="article:modified_time" content="2025-03-27T14:41:22.627Z">
 <meta property="article:author" content="Leoeight">
 <meta property="article:tag" content="课内复习">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          66 字
+          490 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -300,6 +300,19 @@
                 
                 <h2 id="2-1-数据类型"><a href="#2-1-数据类型" class="headerlink" title="2.1 数据类型"></a>2.1 数据类型</h2><p>C#的数据类型主要分为两种 <font color="red"> <strong>值类型和引用类型</strong> </font></p>
 <p>值类型变量<font color="red"> <strong>本身包含其数据</strong> </font>，而引用类型变量包含的是<font color="red"> <strong>指向包含数据的内存块的引用或称为句柄</strong> </font></p>
+<p><font color="red"> <strong>其本质区别是：值类型直接存储其值，而引用类型存储对值得引用</strong> </font></p>
+<p><strong>值类型数据存储在栈中，而引用类型存储在堆中</strong></p>
+<p><strong>堆和栈得主要区别是：</strong></p>
+<p><strong>栈在编译时就分配好空间，在代码中有栈的明确定义</strong></p>
+<p><strong>堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动态分配内存大小，这个内存空间包含的是对另一个内存位置（地址）的引用，即存放实际引用对象值得地方。</strong></p>
+<p>下面对不同数据类型的特性进行一个简单的整理：</p>
+<h4 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1. 整数类型"></a>1. 整数类型</h4><p>可以存储整数值，分为有符号 <em><strong>(singal)</strong></em> ，无符号 <em><strong>(unsingal)</strong></em> 类型，没啥特殊性质。</p>
+<h4 id="2-实数类型"><a href="#2-实数类型" class="headerlink" title="2.实数类型"></a>2.实数类型</h4><p>根据实数的精度、范围等要求，C#为实数定义了浮点类型 <em><strong>(float、double)</strong></em> 和 <em><strong>decimal</strong></em> 类型。</p>
+<p>若无精度要求，尝试用 <em><strong>float</strong></em> 来声明实数类型变量。</p>
+<p><em><strong>Decimal</strong></em> 类型是一种专门用于财务计算的类型。<font color="red"> 如果要将数值以 decimal 类型来处理，就应该用 M（或 m ）将其强制指定为 decimal 类型。 </font>例如：<code>decimal num = 123.567M</code>；</p>
+<h4 id="3-布尔类型"><a href="#3-布尔类型" class="headerlink" title="3.布尔类型"></a>3.布尔类型</h4><p>布尔类型数据用于逻辑运算，表示真或假的逻辑结果，占<strong>一个字节</strong>。C# 语言预定了两个常量标识符 <em><strong>true</strong></em> 和 <em><strong>false</strong></em> ,分别表示真和假。</p>
+<p>**注意！**在 C# 中，布尔值与整数类型截然不同，布尔型不能与整数类型相互转换，因此，布尔型变量不能用整数来赋值。</p>
+<h4 id="4-字符类型"><a href="#4-字符类型" class="headerlink" title="4.字符类型"></a>4.字符类型</h4><p>有一类特殊字符，用反斜杠 <em><strong>\</strong></em> 引导</p>
 
                 
               </div>
