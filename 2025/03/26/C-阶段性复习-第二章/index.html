@@ -27,7 +27,7 @@
 <meta property="og:description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄   其本质区别是：值类型直接存储其值，而引用类型存储对值得引用  值类型数据存储在栈中，而引用类型存储在堆中 堆和栈得主要区别是： 栈在编译时就分配好空间，在代码中有栈的明确定义 堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-26T08:48:16.000Z">
-<meta property="article:modified_time" content="2025-03-27T14:41:22.627Z">
+<meta property="article:modified_time" content="2025-04-02T13:44:37.837Z">
 <meta property="article:author" content="Leoeight">
 <meta property="article:tag" content="课内复习">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          490 字
+          642 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -312,7 +312,12 @@
 <p><em><strong>Decimal</strong></em> 类型是一种专门用于财务计算的类型。<font color="red"> 如果要将数值以 decimal 类型来处理，就应该用 M（或 m ）将其强制指定为 decimal 类型。 </font>例如：<code>decimal num = 123.567M</code>；</p>
 <h4 id="3-布尔类型"><a href="#3-布尔类型" class="headerlink" title="3.布尔类型"></a>3.布尔类型</h4><p>布尔类型数据用于逻辑运算，表示真或假的逻辑结果，占<strong>一个字节</strong>。C# 语言预定了两个常量标识符 <em><strong>true</strong></em> 和 <em><strong>false</strong></em> ,分别表示真和假。</p>
 <p>**注意！**在 C# 中，布尔值与整数类型截然不同，布尔型不能与整数类型相互转换，因此，布尔型变量不能用整数来赋值。</p>
-<h4 id="4-字符类型"><a href="#4-字符类型" class="headerlink" title="4.字符类型"></a>4.字符类型</h4><p>有一类特殊字符，用反斜杠 <em><strong>\</strong></em> 引导</p>
+<h4 id="4-字符类型"><a href="#4-字符类型" class="headerlink" title="4.字符类型"></a>4.字符类型</h4><p>有一类特殊字符，用反斜杠 <em><strong>\</strong></em> 引导，称为转义字符，用于表示一些无法直接表示的字符。除此之外，Unicode转义序列可用 \u 后跟四位十六进制字符（必须指定全部四位十六进制值）表示，或 \x 后跟差不多四位十六进制字符表示（可以省略前导零）。</p>
+<p>例如： <code>\006A</code> 是一个有效的转义序列，而 <code>\u06A</code> 和 <code>\u6A</code> 是无效的。而 <code>\x006A</code>、<code>\x06A</code> 和 <code>\x6A</code> 是有效的，并且对应于同一个字符。</p>
+<h4 id="5-枚举类型"><a href="#5-枚举类型" class="headerlink" title="5.枚举类型"></a>5.枚举类型</h4><p>枚举元素的默认基础类型为 <code>int</code> </p>
+<p>举个例子。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">enum</span> orientation: <span class="hljs-built_in">byte</span><br>&#123;<br>	north,<br>	south,<br>	east,<br>	west<br>&#125;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
