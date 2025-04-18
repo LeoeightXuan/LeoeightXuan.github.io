@@ -27,7 +27,7 @@
 <meta property="og:description" content="2.1 数据类型C#的数据类型主要分为两种  值类型和引用类型  值类型变量 本身包含其数据 ，而引用类型变量包含的是 指向包含数据的内存块的引用或称为句柄   其本质区别是：值类型直接存储其值，而引用类型存储对值得引用  值类型数据存储在栈中，而引用类型存储在堆中 堆和栈得主要区别是： 栈在编译时就分配好空间，在代码中有栈的明确定义 堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-26T08:48:16.000Z">
-<meta property="article:modified_time" content="2025-04-02T13:44:37.837Z">
+<meta property="article:modified_time" content="2025-04-06T13:04:19.530Z">
 <meta property="article:author" content="Leoeight">
 <meta property="article:tag" content="课内复习">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          642 字
+          2.6k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          6 分钟
+          22 分钟
         
       </span>
     
@@ -306,7 +306,7 @@
 <p><strong>栈在编译时就分配好空间，在代码中有栈的明确定义</strong></p>
 <p><strong>堆是在程序运行中动态分配的内存空间，可以根据程序的运行情况，动态分配内存大小，这个内存空间包含的是对另一个内存位置（地址）的引用，即存放实际引用对象值得地方。</strong></p>
 <p>下面对不同数据类型的特性进行一个简单的整理：</p>
-<h4 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1. 整数类型"></a>1. 整数类型</h4><p>可以存储整数值，分为有符号 <em><strong>(singal)</strong></em> ，无符号 <em><strong>(unsingal)</strong></em> 类型，没啥特殊性质。</p>
+<h3 id="一、值类型"><a href="#一、值类型" class="headerlink" title="一、值类型"></a>一、值类型</h3><h4 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1. 整数类型"></a>1. 整数类型</h4><p>可以存储整数值，分为有符号 <em><strong>(singal)</strong></em> ，无符号 <em><strong>(unsingal)</strong></em> 类型，没啥特殊性质。</p>
 <h4 id="2-实数类型"><a href="#2-实数类型" class="headerlink" title="2.实数类型"></a>2.实数类型</h4><p>根据实数的精度、范围等要求，C#为实数定义了浮点类型 <em><strong>(float、double)</strong></em> 和 <em><strong>decimal</strong></em> 类型。</p>
 <p>若无精度要求，尝试用 <em><strong>float</strong></em> 来声明实数类型变量。</p>
 <p><em><strong>Decimal</strong></em> 类型是一种专门用于财务计算的类型。<font color="red"> 如果要将数值以 decimal 类型来处理，就应该用 M（或 m ）将其强制指定为 decimal 类型。 </font>例如：<code>decimal num = 123.567M</code>；</p>
@@ -314,10 +314,93 @@
 <p>**注意！**在 C# 中，布尔值与整数类型截然不同，布尔型不能与整数类型相互转换，因此，布尔型变量不能用整数来赋值。</p>
 <h4 id="4-字符类型"><a href="#4-字符类型" class="headerlink" title="4.字符类型"></a>4.字符类型</h4><p>有一类特殊字符，用反斜杠 <em><strong>\</strong></em> 引导，称为转义字符，用于表示一些无法直接表示的字符。除此之外，Unicode转义序列可用 \u 后跟四位十六进制字符（必须指定全部四位十六进制值）表示，或 \x 后跟差不多四位十六进制字符表示（可以省略前导零）。</p>
 <p>例如： <code>\006A</code> 是一个有效的转义序列，而 <code>\u06A</code> 和 <code>\u6A</code> 是无效的。而 <code>\x006A</code>、<code>\x06A</code> 和 <code>\x6A</code> 是有效的，并且对应于同一个字符。</p>
-<h4 id="5-枚举类型"><a href="#5-枚举类型" class="headerlink" title="5.枚举类型"></a>5.枚举类型</h4><p>枚举元素的默认基础类型为 <code>int</code> </p>
+<h4 id="5-枚举类型"><a href="#5-枚举类型" class="headerlink" title="5.枚举类型"></a>5.枚举类型</h4><p>枚举元素的默认基础类型为 <code>int</code> 枚举类型是一种独特的<strong>值类型</strong>。它用于声明一组命名的<strong>符号常量</strong>。</p>
 <p>举个例子。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">enum</span> orientation: <span class="hljs-built_in">byte</span><br>&#123;<br>	north,<br>	south,<br>	east,<br>	west<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">enum</span> orientation: <span class="hljs-built_in">byte</span><br>&#123;<br>	north,<br>	south,<br>	east,<br>	west<br>&#125;<br><br><span class="hljs-comment">/* 在定义之后，需要声明这个新类型的变量 */</span><br><br>orientation myOri = orientation.north;<br></code></pre></td></tr></table></figure>
 
+<p>从枚举类型到整型的转换需要<font color="red"> <strong>显式转换</strong> </font>来完成。</p>
+<p>例如 <code>int x = (int) orientation.north;</code></p>
+<p>在有限组数的描述中，使用枚举类型比使用无符号的整数类型更加直观、易读。</p>
+<h4 id="6-结构体类型"><a href="#6-结构体类型" class="headerlink" title="6. 结构体类型"></a>6. 结构体类型</h4><p>在 C# 中，结构体是一种<font color="red"> <strong>用户自定义的值类型数据结构</strong> </font>。结构体可以用于存储一组相关的数据，这些数据可能具有不同的类型，类似于类。但与类不同的是，<strong>结构体是值类型而类是引用类型</strong>。这意味着结构体的实例在<strong>栈</strong>上分配内存，而类的实例则在<strong>堆</strong>上分配内存。</p>
+<p>结构体通常用于**存储轻量级的数据，且不能继承特性。**由于结构体是值类型，对结构体变量的赋值和传递会进行值复制，这可以避免意外的副作用。</p>
+<h3 id="二、引用类型"><a href="#二、引用类型" class="headerlink" title="二、引用类型"></a>二、引用类型</h3><p><strong>引用类型</strong>是 C# 应用程序中的主要对象数据类型。而在应用程序执行的过程中，预定义的对象类型以 <code>new</code> 创建对象实例，并且存储在<strong>堆</strong>中，而引用该实例的变量存储在<strong>栈</strong>中。</p>
+<p>引用类型具有如下特征：<br>①引用类型的引用变量存储在栈中，被赋值前的值是<font color="red"> null </font>。实例必须<font color="red"> <strong>在托管堆中为引用类型实例分配内存</strong> </font>；</p>
+<p>②使用<font color="red"> <strong>new关键字</strong> </font>创建引用类型变量的引用实例（<font color="red"> <strong>在托管堆中为引用类型实例分配内存、实例成员初始化等</strong> </font>）；</p>
+<p>③引用类型与值类型的存储方式</p>
+<p>引用类型：引用类型存储在堆中。类型实例化的时候，会在堆中开辟一部分空间存储类的实例。类对象的引用还是存储在栈中。</p>
+<p>值类型：值类型总是分配在它声明的地方，作为局部变量时，存储在栈上。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Product</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> Price;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Example</span>()</span> &#123;<br>    <span class="hljs-comment">// 1. 创建引用变量（此时未关联任何对象）</span><br>    Product phone;  <span class="hljs-comment">// phone = null</span><br><br>    <span class="hljs-comment">// 2. 创建对象并让引用变量指向它</span><br>    phone = <span class="hljs-keyword">new</span> Product(); <br>    phone.Name = <span class="hljs-string">&quot;iPhone&quot;</span>;<br>    phone.Price = <span class="hljs-number">9999</span>;<br><br>    <span class="hljs-comment">// 3. 复制引用变量（指向同一个对象）</span><br>    Product anotherPhone = phone;<br>    anotherPhone.Price = <span class="hljs-number">8999</span>;  <span class="hljs-comment">// 修改的是同一个对象！</span><br><br>    <span class="hljs-comment">// 4. 断开引用</span><br>    phone = <span class="hljs-literal">null</span>;  <span class="hljs-comment">// 对象仍在堆中，直到 GC 回收</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>对象（Object）</strong><ul>
+<li>是 <strong>实际的数据实体</strong>，存储在<strong>堆内存</strong>中</li>
+<li>包含具体的成员数据（字段、属性等）</li>
+<li>比如：<code>new Product()</code> 会在堆中创建一个 <code>Product</code> 对象</li>
+</ul>
+</li>
+<li><strong>引用变量（Reference Variable）</strong><ul>
+<li>是 <strong>指向对象的“遥控器”</strong>，存储在<strong>栈内存</strong>中</li>
+<li>只保存对象在堆中的<strong>内存地址</strong>（类似门牌号）</li>
+<li>比如：<code>Product phone;</code> 中的 <code>phone</code> 变量</li>
+</ul>
+</li>
+</ol>
+<h3 id="关系示意图"><a href="#关系示意图" class="headerlink" title="关系示意图"></a><strong>关系示意图</strong></h3><p>复制</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp">┌─────────────┐        ┌───────────────┐<br>│   栈 Stack   │        │    堆 Heap     │<br>├─────────────┤        ├───────────────┤<br>│ phone ▢─────┼───────▶│ Product对象    │<br>│             │        │ - Name = <span class="hljs-string">&quot;iPhone&quot;</span> <br>└─────────────┘        │ - Price = <span class="hljs-number">9999</span>  <br>                       └───────────────┘<br></code></pre></td></tr></table></figure>
+
+<p>在 C# 里面其实叫托管堆，托管堆不同于堆，它是由 ***CLR（公共语言运行库）***管理，当堆中满了之后，会自动清理堆中的垃圾。所以，作为 <code>.net</code> 开发，我们不需要关心内存释放的问题。</p>
+<h4 id="2-1-字符串类型"><a href="#2-1-字符串类型" class="headerlink" title="2.1 字符串类型"></a>2.1 字符串类型</h4><p>字符串类型是引用类型，不过是特殊的引用类型。<strong>当把一个字符串变量赋给另一个字符串变量时，会发生对内存中同一个字符串的两个引用</strong>。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> str1 = <span class="hljs-string">&quot;Big Head Fish&quot;</span>;<br><span class="hljs-built_in">string</span> str2 = str1;<br>str2 = <span class="hljs-string">&quot;Small Head Fish&quot;</span>;<br><br>Console.WriteLine(str1);<br><br><span class="hljs-comment">// 输出的仍然是“中南大学”</span><br></code></pre></td></tr></table></figure>
+
+<p>常量字符串的值用一对双撇号表示，字符串中也可以包含转义符，由于转义符用 <code>\</code> 开头，因此表示文件路径是，要采用来纳许两个斜杠。例如：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> FileName = <span class="hljs-string">&quot;C:\\Big\\Head\\Fish.exe&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>C# 语言还提供了另外一种替代方式，就是在字符串常量的前面加上 <code>@</code>，在这个字符后的所有字符都会保持原来的含义，而不会解释为转义符。例如：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> FileName = <span class="hljs-string">@&quot;C:\Big\Head\Fish.exe&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-2-数组类型"><a href="#2-2-数组类型" class="headerlink" title="2.2 数组类型"></a>2.2 数组类型</h4><p>数组就是<font color="red"> 有序的、同一类型数据的集合 </font>。数组实质上是包含多个变量的数据结构，其中每一个变量叫做数组的<font color="red"> 元素 </font>，全部元素的数据类型相同。</p>
+<p>说明：</p>
+<p>① 数据类型可以是 C# 中任意的数据类型，数组名为一个合法的标识符；<code>[]</code>指名该标识符是一个数组类型变量。</p>
+<p>② C# 语言中，数组的声明并不为数组元素分配内存，因此，<code>[]</code> 中不能给定数组中元素的个数。</p>
+<p>③ 数组必须在访问前进行初始化。在定义完数组后，必须通过运算符 <code>new</code> 为它分配内存，才能对数组元素进行访问。</p>
+<h4 id="2-3-通用类型-object"><a href="#2-3-通用类型-object" class="headerlink" title="2.3 通用类型 object"></a>2.3 通用类型 object</h4><p>**在 C# 中，object 是所有数据类型的基类型。它是一种通用类型，可以用来表示任何其他类型的值。**在 C# 中，所有的数据类型都直接或间接地继承自 object 类。因此，<font color="red"> <strong>obeject 是 .NET  框架中的基本类型。</strong> </font></p>
+<p><font color="red"> 由于所有数据类型都可以隐式的转换为 object 类型，因此可以使用 object 类型来存储各种类型的数据。 </font></p>
+<p><font color="red"> 在使用 object 类型时，常见的操作是将特定类型的数据 <strong>装箱</strong> 到 object 类型中，以及从 object 类型中 <strong>拆箱</strong> 为特定类型。 </font>装箱是将装箱是将值类型（如 int、float、struct等）转换为通用类型（object），而拆箱是将之前装箱的对象转换回原始的值类型。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">/*</span><br><span class="hljs-comment">	基本值类型的装箱与拆箱</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">using</span> System;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">ConsoleApplication2</span><br>&#123;<br>    <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span> num = <span class="hljs-number">42</span>;<br>            <span class="hljs-built_in">object</span> boxedNum = num; <span class="hljs-comment">// 装箱操作：将值类型int转换为object类型</span><br>            Console.WriteLine(<span class="hljs-string">&quot;boxedNum: &#123;0&#125;&quot;</span>, boxedNum);<br><br>            <span class="hljs-built_in">int</span> unboxedNum = (<span class="hljs-built_in">int</span>)boxedNum; <span class="hljs-comment">// 拆箱操作</span><br>            Console.WriteLine(<span class="hljs-string">&quot;unboxedNum: &#123;0&#125;&quot;</span>, unboxedNum);<br><br>            Console.ReadKey();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">/*</span><br><span class="hljs-comment">	结构体的装箱与拆箱</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">using</span> System;<br><br><span class="hljs-keyword">namespace</span> <span class="hljs-title">ConsoleApplication2</span><br>&#123;<br>    <span class="hljs-comment">// 定义一个结构体Point</span><br>    <span class="hljs-keyword">struct</span> Point<br>    &#123;<br>        <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> X;<br>        <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> Y;<br>    &#125;<br><br>    <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            Point p = <span class="hljs-keyword">new</span> Point(); <br>            p.X = <span class="hljs-number">10</span>;<br>            p.Y = <span class="hljs-number">20</span>;<br><br>            <span class="hljs-built_in">object</span> boxedPoint = p; <span class="hljs-comment">// 装箱操作：值类型→引用类型</span><br>            Point unboxedPoint = (Point)boxedPoint; <span class="hljs-comment">// 拆箱操作：必须精确匹配类型</span><br><br>            Console.WriteLine(<span class="hljs-string">&quot;X: &#123;0&#125;, Y: &#123;1&#125;&quot;</span>, unboxedPoint.X, unboxedPoint.Y); <span class="hljs-comment">// 输出: X:10, Y:20</span><br>            Console.ReadKey();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li><p>类型必须严格匹配</p>
+</li>
+<li><p>装箱会创建值得副本，修改原始值类型不会影响装箱后的对象</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">int</span> a = <span class="hljs-number">5</span>;<br><span class="hljs-built_in">object</span> boxedA= a;<br>a=<span class="hljs-number">10</span>;<br>Console.WriteLine(<span class="hljs-built_in">int</span>)boxedA);<span class="hljs-comment">//输出:5（未被修改)</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>由于<font color="red"> <strong>装箱和拆箱操作的性能开销比较大，可能会导致性能问题。</strong> </font></p>
+</li>
+</ol>
+<h4 id="3-var类型"><a href="#3-var类型" class="headerlink" title="3.var类型"></a>3.var类型</h4><p>在 C# 中，var 关键字用于声明<strong>隐式类型</strong>的局部变量。它允许你在不显式指定数据类型的情况下声明变量。相反，数据类型是由编译器根据变量在<strong>初始化</strong>时赋的值来确定的。</p>
+<h3 id="三、常量与变量"><a href="#三、常量与变量" class="headerlink" title="三、常量与变量"></a>三、常量与变量</h3><h4 id="1-常量"><a href="#1-常量" class="headerlink" title="1. 常量"></a>1. 常量</h4><p>（1）整型常量</p>
+<p>​	具体如下</p>
+<pre><code class="hljs">		1. 二进制：由数字 0 和 1 组成的数字序列。
+		2. 八进制： 以数字 0 开头，且其后是由数字 0~7 整数组成的数字序列。
+		3. 十进制
+		4. 十六进制：以 0x 或者 0x 开头并且后跟 0~9， A~F 组成的数字序列。
+</code></pre>
+<p>（2）浮点数常量</p>
+<ol>
+<li>单精度：通常用 F 或 f 结尾。</li>
+<li>双精度：通常用 D 或 d 结尾。</li>
+</ol>
+<p>（3）字符常量    用单引号引起来。</p>
+<p>（4）字符串常量</p>
+<p>（5）布尔常量</p>
+<p>（6）null常量</p>
+<p>（7）符号常量</p>
+<h4 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h4><p><font color="red"> <strong>变量具有四个属性：名字、类型、变量值和占用的内存地址。</strong> </font></p>
 
                 
               </div>

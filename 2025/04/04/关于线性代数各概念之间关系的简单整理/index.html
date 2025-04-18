@@ -19,22 +19,22 @@
   <meta name="author" content="Leoeight">
   <meta name="keywords" content="">
   
-    <meta name="description" content="准备上课。从这节课开始，课程的难度就会加速上升，大家可以期待一下。我会继续在这里为各位分享课堂代码和课后代码的答案。大家一起加油！争取人人 C# 90+ ！ 首先讲的是冒泡排序的思想，这里展示的是升序排序的冒泡排序。实际上冒泡排序的升序降序调整非常简单，只要更改双层循环中，内层循环的判断就可以。改进版的代码相对于基础代码增加了一个 flag 特判。我们在外层循环中初始化 flag 为 true ，">
+    <meta name="description" content="最近在复习线性代数的过程中，感觉自己很有必要对目前我们接触到的各类概念进行一次系统的整理。目前我们学到了第四章，刚刚学完特征值相关的知识，矩阵对角化还没有讲。但到目前为止我们接触到的线性代数中的概念，论数量，大概已经超过我们学过的高等数学中的概念了吧。面对如此多的概念和定理，想必这门课程已经劝退了不少的同学。但就我学到目前的经验和感受而言，许多概念和定理，他们在适用的条件上其实是相似，而且有关联的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#第七周第二节课的代码整理">
-<meta property="og:url" content="https://leoeightxuan.github.io/2025/04/02/C-%E7%AC%AC%E4%B8%83%E5%91%A8%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/index.html">
+<meta property="og:title" content="关于线性代数各概念之间关系的简单整理">
+<meta property="og:url" content="https://leoeightxuan.github.io/2025/04/04/%E5%85%B3%E4%BA%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%90%84%E6%A6%82%E5%BF%B5%E4%B9%8B%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="小窝">
-<meta property="og:description" content="准备上课。从这节课开始，课程的难度就会加速上升，大家可以期待一下。我会继续在这里为各位分享课堂代码和课后代码的答案。大家一起加油！争取人人 C# 90+ ！ 首先讲的是冒泡排序的思想，这里展示的是升序排序的冒泡排序。实际上冒泡排序的升序降序调整非常简单，只要更改双层循环中，内层循环的判断就可以。改进版的代码相对于基础代码增加了一个 flag 特判。我们在外层循环中初始化 flag 为 true ，">
+<meta property="og:description" content="最近在复习线性代数的过程中，感觉自己很有必要对目前我们接触到的各类概念进行一次系统的整理。目前我们学到了第四章，刚刚学完特征值相关的知识，矩阵对角化还没有讲。但到目前为止我们接触到的线性代数中的概念，论数量，大概已经超过我们学过的高等数学中的概念了吧。面对如此多的概念和定理，想必这门课程已经劝退了不少的同学。但就我学到目前的经验和感受而言，许多概念和定理，他们在适用的条件上其实是相似，而且有关联的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-02T10:58:27.000Z">
-<meta property="article:modified_time" content="2025-04-02T12:41:30.531Z">
+<meta property="article:published_time" content="2025-04-04T05:15:20.000Z">
+<meta property="article:modified_time" content="2025-04-04T11:41:00.912Z">
 <meta property="article:author" content="Leoeight">
-<meta property="article:tag" content="课堂笔记">
+<meta property="article:tag" content="课内复习">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>C#第七周第二节课的代码整理 - 小窝</title>
+  <title>关于线性代数各概念之间关系的简单整理 - 小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="C#第七周第二节课的代码整理"></span>
+            <span id="subtitle" data-typed-text="关于线性代数各概念之间关系的简单整理"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-02 18:58" pubdate>
-          2025年4月2日 晚上
+        <time datetime="2025-04-04 13:15" pubdate>
+          2025年4月4日 下午
         </time>
       </span>
     
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          656 字
+          572 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -293,26 +293,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">C#第七周第二节课的代码整理</h1>
+            <h1 id="seo-header">关于线性代数各概念之间关系的简单整理</h1>
             
             
               <div class="markdown-body">
                 
-                <p>准备上课。从这节课开始，课程的难度就会加速上升，<del>大家可以期待一下</del>。我会继续在这里为各位分享课堂代码和课后代码的答案。大家一起加油！争取人人 C# 90+ ！</p>
-<p>首先讲的是冒泡排序的思想，这里展示的是升序排序的冒泡排序。实际上冒泡排序的升序降序调整非常简单，只要更改双层循环中，内层循环的判断就可以。改进版的代码相对于基础代码增加了一个 <em>flag</em> 特判。我们在外层循环中初始化 <em>flag</em> 为 <em>true</em> ，如果我们在内层循环中，没有进行调换操作，那么这其实就说明，我们现在的数组已经满足了我们的要求，我们不需要进一步的循环来达到目标效果，所以在内存循环结束后，如果 <em>flag</em> 的值仍为 <em>true</em> ，没有发生变化，那么就说明我们的代码已经满足了要求，这事我们就可以退出循环，避免不必要的循环。</p>
-<p>下面就是相关的代码。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">namespace</span> 改进后冒泡排序<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br><br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            <span class="hljs-built_in">int</span>[] arr = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">7</span>, <span class="hljs-number">32</span>, <span class="hljs-number">2</span>, <span class="hljs-number">13</span>, <span class="hljs-number">0</span> &#125;;<br>            Console.WriteLine(<span class="hljs-string">&quot;排序前数组&quot;</span>);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.Length; i++)<br>            &#123; <br>                Console.Write(arr[i] + <span class="hljs-string">&quot; &quot;</span>);<br>            &#125;<br>            Console.WriteLine();<br>            <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.Length - <span class="hljs-number">1</span>; i++)<br>            &#123;<br>                <span class="hljs-built_in">bool</span> flag = <span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = arr.Length - <span class="hljs-number">1</span>; j &gt; i; j--)<br>                &#123;<br>                    <span class="hljs-keyword">if</span> (arr[j] &lt; arr[j - <span class="hljs-number">1</span>])     <span class="hljs-comment">//  如果这里是 &gt; 那么我们最后得到的数组就是降序</span><br>                    &#123;<br>                        flag = <span class="hljs-literal">false</span>;<br>                        <span class="hljs-built_in">int</span> t = arr[j];<br>                        arr[j] = arr[j - <span class="hljs-number">1</span>];<br>                        arr[j - <span class="hljs-number">1</span>] = t;<br>                    &#125;<br>                &#125;<br>                <span class="hljs-keyword">if</span> (flag)<br>                    <span class="hljs-keyword">break</span>;<br>            &#125;<br>            Console.WriteLine(<span class="hljs-string">&quot;排序后数组：&quot;</span>);<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.Length; i++)<br>            &#123;<br>                Console.Write(arr[i] + <span class="hljs-string">&quot; &quot;</span>);<br>            &#125;<br><br>          <span class="hljs-comment">//  Console.WriteLine(&quot;Hello, World!&quot;);</span><br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<p>后面又讲了双向链表的一个使用。课上只是大致的讲了一下，只听一节课就把这个点记住显然是不现实的。这个知识点在考试时估计也不会出现太多。将这个的目的就是为了给我们留个大致的印象，在我们将来尝试用 C#解决问题时，就可以想起来使用这个结构。</p>
-<p>下面是使用的一个代码。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">namespace</span> 双向链表实例<br>&#123;<br>    <span class="hljs-keyword">internal</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>    &#123;<br>        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] <span class="hljs-keyword">args</span></span>)</span><br>        &#123;<br>            LinkedList&lt;<span class="hljs-built_in">string</span>&gt; linkedlist = <span class="hljs-keyword">new</span> LinkedList&lt;<span class="hljs-built_in">string</span>&gt;();<br><br>            linkedlist.AddFirst(<span class="hljs-string">&quot;Head&quot;</span>);<br>            linkedlist.AddFirst(<span class="hljs-string">&quot;Big&quot;</span>);<br>            linkedlist.AddLast(<span class="hljs-string">&quot;Fish&quot;</span>);<br><br>            LinkedListNode&lt;<span class="hljs-built_in">string</span>&gt; headNode = linkedlist.First;<br>            LinkedListNode&lt;<span class="hljs-built_in">string</span>&gt; tailNode = linkedlist.Last;<br><br>            linkedlist.AddAfter(headNode, <span class="hljs-string">&quot;big&quot;</span>);<br><br>            <span class="hljs-keyword">while</span> (headNode != <span class="hljs-literal">null</span>)<br>            &#123;<br>               <span class="hljs-comment">// Console.WriteLine(headNode.ToString());</span><br>                Console.WriteLine(headNode.Value);<br>                headNode = headNode.Next;<br>            &#125;<br><br>           <span class="hljs-comment">// Console.WriteLine(&quot;Hello, World!&quot;);</span><br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
+                <p>最近在复习线性代数的过程中，感觉自己很有必要对目前我们接触到的各类概念进行一次系统的整理。目前我们学到了第四章，刚刚学完特征值相关的知识，矩阵对角化还没有讲。但到目前为止我们接触到的线性代数中的概念，论数量，大概已经超过我们学过的高等数学中的概念了吧。面对如此多的概念和定理，想必这门课程已经劝退了不少的同学。但就我学到目前的经验和感受而言，许多概念和定理，他们在适用的条件上其实是相似，而且有关联的。把他们区分开的往往是具体应用的场景。而这些具体的应用场景，我们其实也可以从一个较低的维度，去对这些场景进行初步的感知和理解。所以这里我要进行一次尝试，试着对于前三章涉及到的概念和定理进行一次系统性的整理，同时在不同的概念和定理之间寻找隐藏的关系。笔者水平不高，在整理的过程中可能会犯一些低级错误，也可能因为水平比较低，可能在许多地方理解的层次不够。如果读者有什么建议，还请麻烦您练习一下我，或者在评论区中指出。我们一起共同进步，谢谢！</p>
+<p>下面我们就开始进行整理。</p>
+<p>整理这些内容，我的思路是这样的：先梳理出我们学习的路线，再根据这些路线，对涉及的概念和知识点进行一个整理，最后再去寻找不同概念和定理之间的联系。所以，我们首先要做的就是梳理学习路线。笔者因为平时空闲时间较少，基本没听过网课，所以整理的依据主要是老师的课件。目前老师的课件进行到了第四章（4.1），那么笔者的整理路线就是从第一章整理到第三章结束。</p>
+<p>下面就是对于学习路线，整理出的树形图：</p>
 
                 
               </div>
@@ -331,7 +320,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/C/" class="category-chain-item">C#</a>
+  <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="category-chain-item">线性代数</a>
   
   
 
@@ -346,7 +335,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="print-no-link">#课堂笔记</a>
+        <a href="/tags/%E8%AF%BE%E5%86%85%E5%A4%8D%E4%B9%A0/" class="print-no-link">#课内复习</a>
       
     </div>
   
@@ -358,8 +347,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>C#第七周第二节课的代码整理</div>
-      <div>https://leoeightxuan.github.io/2025/04/02/C-第七周第二节课的代码整理/</div>
+      <div>关于线性代数各概念之间关系的简单整理</div>
+      <div>https://leoeightxuan.github.io/2025/04/04/关于线性代数各概念之间关系的简单整理/</div>
     </div>
     <div class="license-meta">
       
@@ -371,7 +360,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月2日</div>
+          <div>2025年4月4日</div>
         </div>
       
       
@@ -403,9 +392,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/04/%E5%85%B3%E4%BA%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%90%84%E6%A6%82%E5%BF%B5%E4%B9%8B%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/" title="关于线性代数各概念之间关系的简单整理">
+                      <a href="/2025/04/07/C-%E7%AC%AC%E5%85%AB%E5%91%A8%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/" title="C#第八周第一节课的代码整理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于线性代数各概念之间关系的简单整理</span>
+                        <span class="hidden-mobile">C#第八周第一节课的代码整理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -413,8 +402,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/30/C-%E7%AC%AC%E5%85%AD%E5%91%A8%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BD%9C%E4%B8%9A%E8%AE%B2%E8%A7%A3/" title="C#第六周第二节课的作业讲解">
-                        <span class="hidden-mobile">C#第六周第二节课的作业讲解</span>
+                      <a href="/2025/04/02/C-%E7%AC%AC%E4%B8%83%E5%91%A8%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86/" title="C#第七周第二节课的代码整理">
+                        <span class="hidden-mobile">C#第七周第二节课的代码整理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
