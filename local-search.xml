@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>USB2.0拓展坞——初次的硬件尝试</title>
+    <link href="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/"/>
+    <url>/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<p>最近其实最主要是在学习深度学习，为未来的模型微调还有深度强化学习做准备。不过虽然我已经找到了一本讲解深度学习讲解的特别周到的书籍，然后坚持阅读和实践还是一件很乏味的事情，而且越往深层学，就越是要进行各种数学上的推导，难度提升了很多。于是最近开启了早就有计划的硬件设计学习，边实践边学习，第一个项目就是 <strong>USB2.0拓展坞</strong>。</p><p>最开始我的硬件学习计划是：观看网课，然后跟随网课设计。我看的网课是<a href="https://www.bilibili.com/video/BV1At421h7Ui">这个</a>，这位大佬的课程讲解的很详细，正如他所说 <em>“连高中生都能听懂的硬件设计课程”</em>。不过也正是因为这个，我观看网课的过程十分跳跃。网课最初的几张主要围绕电路和各种硬件元器件展开，大概起一个补充和普及硬件基础的作用。对我来说，这些课程其实基本起不了太多作用。在暑假期间，我已经带着我爸看了很多开源的硬件设计，有能力阅读硬件原理图。同时，我也咨询了很多同学，对硬件设计的工作流有了基本的了解。总结归纳我目前理解的硬件设计工作流大概如下：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 初步敲定硬件的预期实现功能，并预测工况下的各类极限指标。<br><br><span class="hljs-bullet">2.</span> 借助 ai 或者一些开源项目，初步确定可能的硬件选型。<br><br><span class="hljs-bullet">3.</span> 依照当前选型的模块提供的官方手册，绘制关键部分的原理图，重点需要对电压和信号数据进行滤波，并保证满足一些引脚的电容电阻需求。<br><br><span class="hljs-bullet">4.</span> 完成其他不重要部分的硬件设计，在设计规划时主要需要考虑到，硬件要能直观的展示出当前状态。并且具有一定自我保护能力，必要时添加保险丝，保护主控。对于stm32或者esp32一类的主控，要对串口相关部分进行严谨的设计，方便烧录。<br><br><span class="hljs-bullet">5.</span> 将原理图导入进pcb，开始布线。完成布线并通过校验后，上传打板。<br><br></code></pre></td></tr></table></figure><p>在考察期间我看了大量开源，并且会在开源中选中模块，打开模块手册，观察对比手册中提供的样例和开源作者的设计思路。最终我发现，其实大部分相对业余的硬件设计，在涉及到一些复杂模块时（比如通讯模块，编码模块），都可以直接参考官方提供的手册设计。官方的手册提供的参考设计一般都会重视各种保护。绘制原理图时可直接参考。综上，其实原理图相关的设计难度相对还行。而且因为原理图为了易于阅读，一般会分很多部分去绘制。网络之类的标签可以很方便的让我们绘制各个部分的原理图。</p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/%E5%88%9D%E6%AC%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E7%90%86%E5%9B%BE.jpg" alt="初次设计的原理图"></p><p>上面是我初次设计的原理图，后面经过我爸的检查和建议，我加上了一些电容，并在后续pcb绘制的过程中又改变了一些硬件元器件的选型，最终的原理图是这样的：</p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/SCH_Schematic1_1-P1_2026-09-20.png" alt="最终的原理图"></p><p>但是到了pcb设计部分就不一样了。我们需要自主规划好所有硬件器件的位置，然后根据其需要去安排连接的线的一些性质，最后进行铺铜。在这个过程中，我目前主要是积累了下面的一些算是经验的知识。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 对于晶振之类的硬件模块，其最好放置的距离主控芯片近一些。并且在最后打接地的过孔时，用接地的过孔将其包围起来，并绘制禁止区域确保晶振及其连接的线附近不会铺铜。这样可以减少干扰，确保晶振这类频率较高的元器件能够稳定工作。<br><br><span class="hljs-bullet">2.</span> 对于晶振以及一些通讯相关的芯片，最好采用差分对布线，确保布线符合差分对原则，这样可以确保通讯功能基本正常。<br><br><span class="hljs-bullet">3.</span> 对于电源和通讯相关的部分，最好都能够放置电容对其进行滤波保护。具体的规格需要查询手册，很多情况下可以在满足基本需求的基础上额外放置电容。<br><br><span class="hljs-bullet">4.</span> 在硬件选型时需要注意具体的封装格式。过大的封装可能对后期的外壳安装之类造成干扰，同时会占用较多的pcb面积。而较小的封装会给焊接带来难题。<br><br><span class="hljs-bullet">5.</span> 要灵活使用过孔。比如对于电源相关部分，我们如果需要通过过孔传递大电流，我们最好要打多个过孔提高其过流能力。对于接地部分，对于双层板，我们会在板子的两面铺铜以接地，此时我们需要打大量的接地过孔，确保板子上没有孤立的铺铜区域。一方面将两面的铺铜真正连成同一个地；另一方面过孔能够减少回流路径，减少辐射和干扰。过孔还能起到散热作用。<br><br></code></pre></td></tr></table></figure><p>最初在设计原理图时我没有考虑具体的硬件封装，当时的流程是遇到需要的元器件就去搜索，随后直接采用网页推荐的首个元器件。但后续在pcb绘制时才发现，有些元器件的选型虽然参数符合要求，但是封装的格式导致了其会对布线或者焊接带来困难。所以在pcb绘制过程中修改了很多硬件的选型。而在布线之前，非常重要的一件事是规划好各个元器件的部分。目前我设计的流程大致如下：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 在原理图中分不同部分，用 ctrl + shift + x，找到不同部分的原理图对应的pcb，尽量将pcb中的元器件按照原理图中的布置，先摆放到一起，方便后期布线。<br><br><span class="hljs-bullet">2.</span> 完成摆放之后，针对较为重要的部分（比如通讯），首先进行布线，先确保通讯部分的布线满足要求。<br><br><span class="hljs-bullet">3.</span> 随后完成晶振，主控等元器件的布线。要注意尽量让晶振靠近主控。<br><br><span class="hljs-bullet">4.</span> 完成电源相关的布线。对于与芯片相连的部分，最好提高线条宽度，提高过流能力。要善于利用填充区域+过孔去满足硬件设计的需求。<br><br><span class="hljs-bullet">5.</span> 完成接地相关的设计，在板上打出大量过孔，最后铺铜，大致完成pcb的绘制。<br></code></pre></td></tr></table></figure><p>截至目前（2026年9月20日13点00分），我还没有完成硬件打板和后续的焊接。具体这篇文章大概要等到焊接完成之后才能算完结，等焊接完成后我会继续更新这篇文章。下面是pcb相关的展示：</p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20.png" alt="PCB正面"></p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20_2.png" alt="PCB背面"></p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_3.png" alt="3D_PCB正面"></p><p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_4.png" alt="3D_PCB背面"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>嵌入式</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hardware_design</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于嵌赛的总结反思与对未来的规划</title>
     <link href="/2025/07/21/%E5%85%B3%E4%BA%8E%E5%B5%8C%E8%B5%9B%E7%9A%84%E6%80%BB%E7%BB%93%E5%8F%8D%E6%80%9D%E4%B8%8E%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/"/>
     <url>/2025/07/21/%E5%85%B3%E4%BA%8E%E5%B5%8C%E8%B5%9B%E7%9A%84%E6%80%BB%E7%BB%93%E5%8F%8D%E6%80%9D%E4%B8%8E%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/</url>

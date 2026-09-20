@@ -19,22 +19,29 @@
   <meta name="author" content="Leoeight">
   <meta name="keywords" content="">
   
-    <meta name="description" content="​	刚从合肥回来，在高铁上我就已经知道了比赛结果，自己没能进入决赛，省去了两个小时的测评，后面也不用再折腾这个小项目了。从期末周开始，我就一直处于一种高度紧张的状态。期末结束，紧接而来的是课设，随后是嵌赛。在这长达一个多月的时间，我经常跟朋友调侃，自己是“死去活来，活来死去”。问题出现的时候，我是”活来死去“，问题解决我又”死去活来“。现在终于算是熬过来了。从结果来看，这一个多月过的还可以，成绩不">
+    <meta name="description" content="最近其实最主要是在学习深度学习，为未来的模型微调还有深度强化学习做准备。不过虽然我已经找到了一本讲解深度学习讲解的特别周到的书籍，然后坚持阅读和实践还是一件很乏味的事情，而且越往深层学，就越是要进行各种数学上的推导，难度提升了很多。于是最近开启了早就有计划的硬件设计学习，边实践边学习，第一个项目就是 USB2.0拓展坞。 最开始我的硬件学习计划是：观看网课，然后跟随网课设计。我看的网课是这个，这位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于嵌赛的总结反思与对未来的规划">
-<meta property="og:url" content="https://leoeightxuan.github.io/2025/07/21/%E5%85%B3%E4%BA%8E%E5%B5%8C%E8%B5%9B%E7%9A%84%E6%80%BB%E7%BB%93%E5%8F%8D%E6%80%9D%E4%B8%8E%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/index.html">
+<meta property="og:title" content="USB2.0拓展坞——初次的硬件尝试">
+<meta property="og:url" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/index.html">
 <meta property="og:site_name" content="小窝">
-<meta property="og:description" content="​	刚从合肥回来，在高铁上我就已经知道了比赛结果，自己没能进入决赛，省去了两个小时的测评，后面也不用再折腾这个小项目了。从期末周开始，我就一直处于一种高度紧张的状态。期末结束，紧接而来的是课设，随后是嵌赛。在这长达一个多月的时间，我经常跟朋友调侃，自己是“死去活来，活来死去”。问题出现的时候，我是”活来死去“，问题解决我又”死去活来“。现在终于算是熬过来了。从结果来看，这一个多月过的还可以，成绩不">
+<meta property="og:description" content="最近其实最主要是在学习深度学习，为未来的模型微调还有深度强化学习做准备。不过虽然我已经找到了一本讲解深度学习讲解的特别周到的书籍，然后坚持阅读和实践还是一件很乏味的事情，而且越往深层学，就越是要进行各种数学上的推导，难度提升了很多。于是最近开启了早就有计划的硬件设计学习，边实践边学习，第一个项目就是 USB2.0拓展坞。 最开始我的硬件学习计划是：观看网课，然后跟随网课设计。我看的网课是这个，这位">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-21T07:58:55.000Z">
-<meta property="article:modified_time" content="2025-07-21T08:57:48.971Z">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/%E5%88%9D%E6%AC%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E7%90%86%E5%9B%BE.jpg">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/SCH_Schematic1_1-P1_2026-09-20.png">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20.png">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20_2.png">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_3.png">
+<meta property="og:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_4.png">
+<meta property="article:published_time" content="2026-09-20T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-20T05:07:01.782Z">
 <meta property="article:author" content="Leoeight">
-<meta property="article:tag" content="产品设计">
+<meta property="article:tag" content="Hardware_design">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://leoeightxuan.github.io/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/%E5%88%9D%E6%AC%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E7%90%86%E5%9B%BE.jpg">
   
   
   
-  <title>关于嵌赛的总结反思与对未来的规划 - 小窝</title>
+  <title>USB2.0拓展坞——初次的硬件尝试 - 小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于嵌赛的总结反思与对未来的规划"></span>
+            <span id="subtitle" data-typed-text="USB2.0拓展坞——初次的硬件尝试"></span>
           
         </div>
 
@@ -224,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-21 15:58" pubdate>
-          2025年7月21日 下午
+        <time datetime="2026-09-20 10:00" pubdate>
+          2026年9月20日 上午
         </time>
       </span>
     
@@ -236,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.8k 字
         
       </span>
     
@@ -247,7 +254,7 @@
         
         
         
-          11 分钟
+          16 分钟
         
       </span>
     
@@ -293,15 +300,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">关于嵌赛的总结反思与对未来的规划</h1>
+            <h1 id="seo-header">USB2.0拓展坞——初次的硬件尝试</h1>
             
             
               <div class="markdown-body">
                 
-                <p>​	刚从合肥回来，在高铁上我就已经知道了比赛结果，自己没能进入决赛，省去了两个小时的测评，后面也不用再折腾这个小项目了。从期末周开始，我就一直处于一种高度紧张的状态。期末结束，紧接而来的是课设，随后是嵌赛。在这长达一个多月的时间，我经常跟朋友调侃，自己是“死去活来，活来死去”。问题出现的时候，我是”活来死去“，问题解决我又”死去活来“。现在终于算是熬过来了。从结果来看，这一个多月过的还可以，成绩不错，课设结果为优，嵌赛虽然没能进决赛，但也算是取得了相对最好的结果，毕竟我原本就没打算把这个项目给做完。在人手不够，时间不够，技术积累也不够的情况下还能把这个项目以一种完整的形态整完，这已经是非常好的结果了。在这一个多月里，我学到了很多新的技术，也拥有了非常多新的经历，积累了很多实践的经验。</p>
-<p>​	不过，仔细一想，其实自己也没有付出全力。直到嵌赛初赛提交的前几个小时，我其实还在推算自己能否准时提交作品，完成视频编辑，文档编写。我是在确定自己有希望准时提交作品才付出了大部分的时间，熬夜去追赶进度。即使时间不足，我也没有考虑通宵解决问题。最后一天虽然熬了夜，但也保证了自己能有五个小时的睡眠。对比生命和项目，我大概还是更重视生命。适度努力足矣，不必内卷，我也很讨厌内卷。这次没能进入决赛，与我是否使出全力大概无关。事实证明，这个项目不需要花费我太长的时间，而嵌赛给我的准备时间其实是很长的，我没能在期末结束前有效的利用空余的时间去做相关的调查研究，再往前推，我的比赛主题确定的就很随意，只是根据比赛，同队友讨论后随意的确定了一个主题，没能跟生产实际结合。从决赛名单上其实很容易发现，我们不需要绞尽脑汁地去思考创新之道，我们的重点不是创新，而是解决实际问题。所谓地创新其实就是对普通的问题解决途径的改进。比如有同学从3D打印角度入手，设计耗材干燥箱系统，比如有同学从农业入手，设计农业检测和采收系统。我今年做的是宠物喂食器，其实也有同学设计宠物喂食器，并成功入围。他们的作品的特点是精准定量，我的作品其实也有这个特点。。。不过当时讲解的时候似乎介绍的不够到位（？），甚至有功能忘记讲了。有可能这也是我没能成功从一堆宠物喂食器中突围出来的原因hhh。</p>
-<p>​	未来如果还参加这个比赛，我大概会从生产实际的角度，或者从机器人角度去考虑，比如把一些应用在复杂场景的机器人，简化移植到单片机上。这个我在暑假或许会进行相关的准备，我后面或许会准备一个基于f767或者其他引脚比较多的芯片的平台去进行电机控制平台的搭建。一方面借助这个去拓展嵌入式项目搭建相关的经验，另一方面也可以借此去实现现实中的控制建模。眼下我需要对机械结构方面进行学习，虽然专业是机械，但我还不太懂如何设计一个具体能用的结构，对于齿轮，轴承以及滑块和带轮等结构也没有太多实践的经验。未来在嵌入式领域，我会主要重视控制，感知和操作系统方面的学习。这三者其实是环环相扣的，精准合适的控制必然离不开感知，而如果想要进行同步低延迟的感知和控制的结合，我们必须合理的应用操作系统。</p>
-<p>​	在下个学期，我会参与到战队机器人电控方面的研究，我也得完成大创相关的工作。除此之外，日常的学习任务也会比往常要更加艰苦。虽然现在我的成绩还算凑合，但是在未来各方面压力增加的情况下可能就不太好说了，所以还得继续努力。进来我感觉自己看待问题的角度又有些模糊了，正好现在是假期，后面我会开展相关的阅读工作，保证自己能以一个较为全面的眼光去看待自己所面临的，技术的和非技术的问题。</p>
+                <p>最近其实最主要是在学习深度学习，为未来的模型微调还有深度强化学习做准备。不过虽然我已经找到了一本讲解深度学习讲解的特别周到的书籍，然后坚持阅读和实践还是一件很乏味的事情，而且越往深层学，就越是要进行各种数学上的推导，难度提升了很多。于是最近开启了早就有计划的硬件设计学习，边实践边学习，第一个项目就是 <strong>USB2.0拓展坞</strong>。</p>
+<p>最开始我的硬件学习计划是：观看网课，然后跟随网课设计。我看的网课是<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1At421h7Ui">这个</a>，这位大佬的课程讲解的很详细，正如他所说 <em>“连高中生都能听懂的硬件设计课程”</em>。不过也正是因为这个，我观看网课的过程十分跳跃。网课最初的几张主要围绕电路和各种硬件元器件展开，大概起一个补充和普及硬件基础的作用。对我来说，这些课程其实基本起不了太多作用。在暑假期间，我已经带着我爸看了很多开源的硬件设计，有能力阅读硬件原理图。同时，我也咨询了很多同学，对硬件设计的工作流有了基本的了解。总结归纳我目前理解的硬件设计工作流大概如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 初步敲定硬件的预期实现功能，并预测工况下的各类极限指标。<br><br><span class="hljs-bullet">2.</span> 借助 ai 或者一些开源项目，初步确定可能的硬件选型。<br><br><span class="hljs-bullet">3.</span> 依照当前选型的模块提供的官方手册，绘制关键部分的原理图，重点需要对电压和信号数据进行滤波，并保证满足一些引脚的电容电阻需求。<br><br><span class="hljs-bullet">4.</span> 完成其他不重要部分的硬件设计，在设计规划时主要需要考虑到，硬件要能直观的展示出当前状态。并且具有一定自我保护能力，必要时添加保险丝，保护主控。对于stm32或者esp32一类的主控，要对串口相关部分进行严谨的设计，方便烧录。<br><br><span class="hljs-bullet">5.</span> 将原理图导入进pcb，开始布线。完成布线并通过校验后，上传打板。<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>在考察期间我看了大量开源，并且会在开源中选中模块，打开模块手册，观察对比手册中提供的样例和开源作者的设计思路。最终我发现，其实大部分相对业余的硬件设计，在涉及到一些复杂模块时（比如通讯模块，编码模块），都可以直接参考官方提供的手册设计。官方的手册提供的参考设计一般都会重视各种保护。绘制原理图时可直接参考。综上，其实原理图相关的设计难度相对还行。而且因为原理图为了易于阅读，一般会分很多部分去绘制。网络之类的标签可以很方便的让我们绘制各个部分的原理图。</p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/%E5%88%9D%E6%AC%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E7%90%86%E5%9B%BE.jpg" srcset="/img/loading.gif" lazyload alt="初次设计的原理图"></p>
+<p>上面是我初次设计的原理图，后面经过我爸的检查和建议，我加上了一些电容，并在后续pcb绘制的过程中又改变了一些硬件元器件的选型，最终的原理图是这样的：</p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/SCH_Schematic1_1-P1_2026-09-20.png" srcset="/img/loading.gif" lazyload alt="最终的原理图"></p>
+<p>但是到了pcb设计部分就不一样了。我们需要自主规划好所有硬件器件的位置，然后根据其需要去安排连接的线的一些性质，最后进行铺铜。在这个过程中，我目前主要是积累了下面的一些算是经验的知识。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 对于晶振之类的硬件模块，其最好放置的距离主控芯片近一些。并且在最后打接地的过孔时，用接地的过孔将其包围起来，并绘制禁止区域确保晶振及其连接的线附近不会铺铜。这样可以减少干扰，确保晶振这类频率较高的元器件能够稳定工作。<br><br><span class="hljs-bullet">2.</span> 对于晶振以及一些通讯相关的芯片，最好采用差分对布线，确保布线符合差分对原则，这样可以确保通讯功能基本正常。<br><br><span class="hljs-bullet">3.</span> 对于电源和通讯相关的部分，最好都能够放置电容对其进行滤波保护。具体的规格需要查询手册，很多情况下可以在满足基本需求的基础上额外放置电容。<br><br><span class="hljs-bullet">4.</span> 在硬件选型时需要注意具体的封装格式。过大的封装可能对后期的外壳安装之类造成干扰，同时会占用较多的pcb面积。而较小的封装会给焊接带来难题。<br><br><span class="hljs-bullet">5.</span> 要灵活使用过孔。比如对于电源相关部分，我们如果需要通过过孔传递大电流，我们最好要打多个过孔提高其过流能力。对于接地部分，对于双层板，我们会在板子的两面铺铜以接地，此时我们需要打大量的接地过孔，确保板子上没有孤立的铺铜区域。一方面将两面的铺铜真正连成同一个地；另一方面过孔能够减少回流路径，减少辐射和干扰。过孔还能起到散热作用。<br><br></code></pre></td></tr></table></figure>
+
+<p>最初在设计原理图时我没有考虑具体的硬件封装，当时的流程是遇到需要的元器件就去搜索，随后直接采用网页推荐的首个元器件。但后续在pcb绘制时才发现，有些元器件的选型虽然参数符合要求，但是封装的格式导致了其会对布线或者焊接带来困难。所以在pcb绘制过程中修改了很多硬件的选型。而在布线之前，非常重要的一件事是规划好各个元器件的部分。目前我设计的流程大致如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">1.</span> 在原理图中分不同部分，用 ctrl + shift + x，找到不同部分的原理图对应的pcb，尽量将pcb中的元器件按照原理图中的布置，先摆放到一起，方便后期布线。<br><br><span class="hljs-bullet">2.</span> 完成摆放之后，针对较为重要的部分（比如通讯），首先进行布线，先确保通讯部分的布线满足要求。<br><br><span class="hljs-bullet">3.</span> 随后完成晶振，主控等元器件的布线。要注意尽量让晶振靠近主控。<br><br><span class="hljs-bullet">4.</span> 完成电源相关的布线。对于与芯片相连的部分，最好提高线条宽度，提高过流能力。要善于利用填充区域+过孔去满足硬件设计的需求。<br><br><span class="hljs-bullet">5.</span> 完成接地相关的设计，在板上打出大量过孔，最后铺铜，大致完成pcb的绘制。<br></code></pre></td></tr></table></figure>
+
+<p>截至目前（2026年9月20日13点00分），我还没有完成硬件打板和后续的焊接。具体这篇文章大概要等到焊接完成之后才能算完结，等焊接完成后我会继续更新这篇文章。下面是pcb相关的展示：</p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20.png" srcset="/img/loading.gif" lazyload alt="PCB正面"></p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/PCB_PCB1_2026-09-20_2.png" srcset="/img/loading.gif" lazyload alt="PCB背面"></p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_3.png" srcset="/img/loading.gif" lazyload alt="3D_PCB正面"></p>
+<p><img src="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/3D_PCB1_2026-09-20_4.png" srcset="/img/loading.gif" lazyload alt="3D_PCB背面"></p>
 
                 
               </div>
@@ -335,7 +359,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/" class="print-no-link">#产品设计</a>
+        <a href="/tags/Hardware-design/" class="print-no-link">#Hardware_design</a>
       
     </div>
   
@@ -347,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于嵌赛的总结反思与对未来的规划</div>
-      <div>https://leoeightxuan.github.io/2025/07/21/关于嵌赛的总结反思与对未来的规划/</div>
+      <div>USB2.0拓展坞——初次的硬件尝试</div>
+      <div>https://leoeightxuan.github.io/2026/09/20/初次的硬件尝试/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月21日</div>
+          <div>2026年9月20日</div>
         </div>
       
       
@@ -392,18 +416,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/09/20/%E5%88%9D%E6%AC%A1%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B0%9D%E8%AF%95/" title="USB2.0拓展坞——初次的硬件尝试">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">USB2.0拓展坞——初次的硬件尝试</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/05/19/C-%E9%98%B6%E6%AE%B5%E6%80%A7%E5%A4%8D%E4%B9%A0-%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%88%E5%9F%BA%E4%BA%8E%E8%AF%BE%E6%9C%AC%EF%BC%89/" title="C#阶段性复习-第三章（基于课本）">
-                        <span class="hidden-mobile">C#阶段性复习-第三章（基于课本）</span>
+                      <a href="/2025/07/21/%E5%85%B3%E4%BA%8E%E5%B5%8C%E8%B5%9B%E7%9A%84%E6%80%BB%E7%BB%93%E5%8F%8D%E6%80%9D%E4%B8%8E%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/" title="关于嵌赛的总结反思与对未来的规划">
+                        <span class="hidden-mobile">关于嵌赛的总结反思与对未来的规划</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
